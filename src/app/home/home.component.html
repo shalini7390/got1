@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row" style="text-align:center">
+      <div class="col-md-12 title1" ></div> 
+      <br>
+      <br>
+      <br>
+  
+      <div *ngFor="let item of allItems" class="col-md-4">
+        <br>
+        <br>
+        <!--characters-->
+        <div *ngIf="item.gender" class="card character1">
+            <h5 class="card-header">Character</h5>
+            <img class="card-img-top" src="./assets/got2.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{item.name|uppercase}}</h5>
+              <p class="card-text">Gender:-{{item.gender}}</p>
+              <a href="#" class="btn btn-secondary" [routerLink]="['/characters',item.url.split('characters/').pop()]">View</a>
+            </div>
+          </div>
+        <!--books-->
+         <div *ngIf="item.isbn" class="card books1">
+          <h5 class="card-header">Book</h5>
+          <img class="card-img-top" src="./assets/got1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title booktitle">{{item.name|uppercase}}</h5>
+            <p class="card-text booktext">Publisher of the book:-{{item.publisher}}</p>
+            <!--To get the id we are popping out other things from url till books/-->
+            <a href="#" class="btn btn-secondary" [routerLink]="['/books',item.url.split('books/').pop()]">View</a>
+          </div>
+        </div>
+        
+  <br>
+  <br>
+           <!--houses-->
+  
+        <div *ngIf="item.region" class="card house1">
+          <h5 class="card-header">House</h5>
+          <img class="card-img-top" src="./assets/got3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{item.name|uppercase}}</h5>
+            <p class="card-text">Region:-{{item.region}}</p>
+            <a href="view.html" class="btn btn-secondary" [routerLink]="['/houses',item.url.split('houses/').pop()]">View
+            </a>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  </div>

@@ -1,0 +1,118 @@
+<div class ="container-fluid">
+  
+    <div class="container" *ngIf="currentBook" style="word-wrap: break-word;background-color: red">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="heading" style="margin-left: 30%; font-style: italic; font-weight: 700; text-shadow: 0 0 3px #FF0000;">{{currentBook.name}}</h1>
+        </div>
+      </div>
+      <img src="assets/got1.jpg" class="img-fluid" alt="Responsive image" style="margin-left: 30%;margin-top:3%">
+      <div class="row "style="margin-top:6%; font-size:20px;font-weight:bold ; color:hsl(0, 100%, 30%);">
+        <div class="col-md-6">
+          <div>isbn:- {{currentBook.isbn}}</div>
+          <div>Author:- {{currentBook.authors}}</div>
+          <div>No Of Pages:- {{currentBook.numberOfPages}}</div>
+        </div>
+        <div class="col-md-6">
+          <div>Publisher:- {{currentBook.publisher}}</div>
+          <div>MediaType:- {{currentBook.mediaType}}</div>
+    <div>Released On:- {{currentBook.released|date}}</div>
+        </div>
+      </div>
+      
+      <div class="row" style="margin-top: 6%; font-size:16px">
+        <div class="col-md-12">
+          <div style="text-shadow: 0 0 3px #FF0000;font-weight: 700;font-size:28px">Characters:-</div>
+           <div style="margin-top:2%;color:hsl(0, 100%, 30%)"> {{currentBook.characters}}</div></div></div>
+          <div class="row">
+          <div class ="col-md-12">
+          <div style="text-shadow: 0 0 3px #FF0000;font-weight: 700;font-size:28px">Pov Characters:-</div>
+         <div  style="margin-top:2%;color:hsl(0, 100%, 30%)"> {{currentBook.povCharacters}}</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    
+    <!--characters-->
+    <div class="container" *ngIf="currentCharacter"style="word-wrap: break-word; background-color: orange">
+      <div class="row">
+        <div class="col-md-12" style="color:#ffbf00;">
+          <h1 class="heading"style="margin-left: 30%; font-style: italic; font-weight: 700;">{{currentCharacter.name}}</h1>
+        </div>
+      </div>
+      <img src="assets/got2.jpg" class="img-fluid" alt="Responsive image" width="500px" height="250px">
+      <div class="row"style="margin-top:4%; font-weight:bold">
+        <div class="col-md-6" style="font-size: 20px">
+          <div>Gender:- {{currentCharacter.gender}}</div>
+          <div>Culture:- {{currentCharacter.culture}}</div>
+          <div>Born on:- {{currentCharacter.born}}</div>
+          <div>Father:- {{currentCharacter.father}}</div>
+          <div>Mother:- {{currentCharacter.mother}}</div>
+       
+        </div>
+        <div class="col-md-6" style="font-size: 20px">
+            <div>Spouse:- {{currentCharacter.spouse}}</div>
+          <div>Died on:- {{currentCharacter.died}}</div>
+          <div>Title:- {{currentCharacter.titles}}</div>
+          <div>Aliaes :- {{currentCharacter.aliases}}</div>
+          <div>Played By:- {{currentCharacter.playedBy}}</div>
+        </div>
+      </div><hr>
+      <div class="row"style="margin-top:4%; font-weight:bold">
+        <div class="col-md-12">
+          <div>TV Series:- {{currentCharacter.tvSeries}}</div>
+        </div>
+        <div class="col-md-12">
+            <div>Allegiances:- {{currentCharacter.allegiances}}</div>
+          </div>
+          <div class="col-md-12">
+              <div>Books:- {{currentCharacter.books}}</div>
+            </div>
+            <div class="col-md-12">
+                <div>Pov Books:- {{currentCharacter.povBooks}}</div>
+              </div>
+      </div>
+    </div>
+    <!--houses-->
+    <div class="container" *ngIf="currentHouse"style="word-wrap: break-word; background-color:black">
+      <div class="row" style="color:coral">
+        <div class="col-md-12" style="text-align: center">
+          <h1 class="heading">{{currentHouse.name}}</h1>
+        </div>
+      </div>
+      <img src="assets/got3.jpg" class="img-fluid" alt="Responsive image" style="margin-left: 30%;margin-top:3%">
+      <div class="row" style="margin-top:3%; color:#ffbf00; margin-left: 3% ; font-size: 20px">
+        <div class="col-md-6">
+          <div>Region:-{{currentHouse.region}}</div>
+         
+          <div>Words:-{{currentHouse.words}}</div>
+          <div>Title:-{{currentHouse.titles}}</div>
+          <div>Seats:-{{currentHouse.seats}}</div>
+          <div>Overloaded:-{{currentHouse.overloaded}}</div>
+      
+        </div>
+        <div class="col-md-6">
+    
+          <div>Founded On:-{{currentHouse.founded}}</div>
+          <div>Died Out:-{{currentHouse.diedOut}}</div>
+          <div>Ancestoral Weapons:-{{currentHouse.ancestoralWeapons}}</div>
+          <div>Cadet Branches:-{{currentHouse.cadetBranches}}</div>
+    
+        </div>
+      </div><hr>
+      <div class="col-md-12" style="margin-top: 3% ;color:#ffbf00; margin-left: 3% ; font-size: 20px">
+          <div>Coat Of Arms:-{{currentHouse.coatOfArms}}</div>
+      </div>
+      <div class="col-md-12"style="color:#ffbf00; margin-left: 3% ; font-size: 20px">
+          <div>CurrentLord:-{{currentHouse.currentLord}}</div>
+      </div>
+      <div class="col-md-12"style="color:#ffbf00; margin-left: 3% ; font-size: 20px">
+         
+          <div>Heir:-{{currentHouse.heir}}</div>
+      </div>
+      <div class="col-md-12"style="color:#ffbf00; margin-left: 3% ; font-size: 20px">
+        <div>Sworn Members:-{{currentHouse.swornMembers}}</div>
+      </div>
+    </div>
+    </div>
